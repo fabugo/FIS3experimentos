@@ -11,12 +11,17 @@ T<-(P^0.25)
 #GERAR GRAFICO 1 CORRENTE VS DDP
 png("exp5/Grafico%d1.png")
 plot(I~Vr,ylab="I(mA)",xlab="Vr(V)",col="red",type="p")
+fit3 <- lm(I~poly(Vr,5,raw=TRUE))
+xx <- seq(0.51,1.5, length=20)
+lines(xx, predict(fit3, data.frame(Vr=xx)), col="blue")
 dev.off()
 
 #GERAR GRAFICO 2 RESISTENCIA VS DDP
 png("exp5/Grafico%d2.png")
 plot(R~Vr,ylab="R(ohm)",xlab="Vr(V)",col="red",type="p")
-lines(R~Vr,lty = 2,col="blue")
+fit3 <- lm(R~poly(Vr,3,raw=TRUE))
+xx <- seq(0.5,1.2, length=20)
+lines(xx, predict(fit3, data.frame(Vr=xx)), col="blue")
 dev.off()
 
 #GERAR GRAFICO 1 RESISTENCIA VS TEMPERATURA
