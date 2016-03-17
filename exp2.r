@@ -10,18 +10,18 @@ T<-(P^0.25)
 
 #GERAR GRAFICO 1 CORRENTE VS DDP
 png("exp2/Grafico%d1.png")
-plot(I~Vr,ylab="I(mA)",xlab="Vr(V)",col="red",type="p")
+plot(I~Vr,ylab="I(mA)",xlab="Vr(V)",col="red",type="p",cex=2)
 abline(lm(I~Vr),lty = 2,col="blue")
 dev.off()
 
 #GERAR GRAFICO 2 RESISTENCIA VS DDP
 png("exp2/Grafico%d2.png")
-plot(R~Vr,ylab="R(ohm)",xlab="Vr(V)",col="red",type="p")
+plot(R~Vr,ylab="R(ohm)",xlab="Vr(V)",col="red",type="p",cex=2)
 abline(mean(R),0,lty = 2,col="blue")
 dev.off()
 
 #GERAR GRAFICO 1 RESISTENCIA VS TEMPERATURA
 png("exp2/Grafico%d3.png")
-plot(R~T,ylab="R(ohm)",xlab="T(K)",col="red",type="p")
+plot(R~T,ylab="R(ohm)",xlab="T(K)",col="red",type="p",cex=2)
 abline(mean(R),0,lty = 2,col="blue")
 dev.off()
