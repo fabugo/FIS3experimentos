@@ -25,7 +25,7 @@ E<-C/Ad
 Ct = E*Ad
 D <- 1/d
 png("exp6/Grafico%d3.png")
-plot(Ct~D,main="Vidro",ylab="C(pF)",xlab="d(mm)",col="red")
+plot(Ct~D,main="Relação Linear(Vidro)",ylab="C(pF)",xlab="1/d(mm)",col="red")
 abline(lm(Ct~D),lty = 2,col="green")
 dev.off()
 #Capacitancia com ALUMINIO
@@ -36,6 +36,6 @@ E<-C/Ad
 Ct = E*Ad
 D <- 1/d
 png("exp6/Grafico%d4.png")
-plot(C~D,main="Alumínio",ylab="C(pF)",xlab="d(mm)",col="red")
+plot(C~D,main="Relação Linear(Alumínio)",ylab="C(pF)",xlab="1/d(mm)",col="red")
 abline(lm(Ct~D),lty = 2,col="green")
 dev.off()
