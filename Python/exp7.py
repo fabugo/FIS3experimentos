@@ -23,7 +23,7 @@ if __name__ == '__main__':
 	if(len(sys.argv) != 2):
 		print "Use: python exp7.py path"
 		sys.exit()
-	path = sys.argv[1]+"/dados"
-	for i in range(6):
+	path = sys.argv[1]+"/dados/dados"
+	for i in range(8):
 		readMake(path + str(i) +".dat")
 	plt.show()
